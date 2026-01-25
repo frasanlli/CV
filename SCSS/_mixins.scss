@@ -2,21 +2,33 @@
 
 @mixin responsive {
   @media (min-width: $mobile) {
-    margin: 0;
-    max-width: 100vw;
     font-size: 14px;
   }
 
   @media (min-width: $tablet) {
-    margin: 0;
-    max-width: 90vw;
     font-size: 16px;
   }
 
   @media (min-width: $desktop) {
-    margin: 0;
-    max-width: 80vw;
     font-size: 18px;
+  }
+}
+
+@mixin responsive-button {
+  @media (min-width: $mobile) {
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 1em 0.5em;
+  }
+
+  @media (min-width: $tablet) {
+    margin-left: 0.5em;
+    padding: 1em 0.5em;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 0.5em;
+    padding: 1.5em 1em;
   }
 }
 
@@ -33,4 +45,72 @@
     content: "#{$resultado}";
   }
 
+}
+
+@mixin responsive_grid {
+  @media (min-width: $mobile ) and ( max-width: $tablet) {
+    grid-template:
+      'head1 head2'
+      'lenguage db'
+      'head3 head4'
+      'vc ml'
+      'head5 none'
+      'other none';
+    #head{
+      border-top: 1px black dotted;
+      border-left: 1px black dotted;
+      padding: 0 5px;
+    }
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    grid-template:
+      'head1 head2 head3'
+      'lenguage db vc'
+      'head4 head5 none'
+      'ml other none';
+    #head{
+      border-top: 1px black dotted;
+      border-left: 1px black dotted;
+      padding: 0 5px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    grid-template:
+        'head1 head2 head3 head4 head5'
+        'lenguage db vc ml other';
+    #head{
+      border-left: 1px black dotted;
+      padding: 0 5px;
+    }
+  }
+}
+
+@mixin responsive_contact {
+  @media (min-width: $mobile) {
+    grid-template-columns: auto auto;
+  }
+
+  @media (min-width: $tablet) {
+    grid-template-columns: auto auto auto;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@mixin responsive_promo {
+  @media (min-width: $mobile) {
+    grid-template-columns: auto;
+  }
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 50% 50%;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 50% 50%;
+  }
 }
