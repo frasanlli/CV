@@ -1,0 +1,67 @@
+@use 'variables';
+@use 'mixins';
+@import 'variables';
+@import 'mixins';
+
+*{
+  font-family: $fuente-principal;
+  @include responsive
+}
+
+body{
+  text-align: justify;
+}
+
+header{
+  background-color: $fondo-color;
+  margin: auto;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.actions{
+  padding-right: 0;
+}
+
+button{
+  background-color: #0056b3;
+  color: white;
+  padding: 1.5em 1em;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: rgb(71, 145, 74);
+  cursor: pointer;
+}
+
+h1{
+  font-family: fantasy;
+  font-size: xx-large;
+}
+
+nav {
+  display: flex;
+  margin: 0 auto;
+  font-size: medium;
+}
+
+nav a{
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(143, 183, 209);
+  padding: 5px;
+  border: 1px black solid;
+}
+
+a:hover {
+  background-color: rgb(71, 145, 74);
+}
+
+section {
+  border-top: 1px black solid;
+  padding: 1em;
+}

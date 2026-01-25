@@ -1,0 +1,36 @@
+@import 'variables';
+
+@mixin responsive {
+  @media (min-width: $mobile) {
+    margin: 0;
+    max-width: 100vw;
+    font-size: 14px;
+  }
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    max-width: 90vw;
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    max-width: 80vw;
+    font-size: 18px;
+  }
+}
+
+@mixin tabla-celda($resultado) {
+
+  @if $resultado == "victoria" {
+    background-color: #00b318;
+  } @else if $resultado == "derrota" {
+    background-color: #f06f6f;
+  } @else if $resultado == "empate" {
+    background-color: #dfd877;
+  }
+  &::after {
+    content: "#{$resultado}";
+  }
+
+}
