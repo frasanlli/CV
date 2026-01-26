@@ -18,28 +18,29 @@
         </div>
         <div class="actions">
             <button class="contact" onclick="prepararMail()">Contactar</button>
-            <button class="download" onclick="imprimirPDF()">Descargar CV</button>
+            <a class="curv" href="assets/Francisco Sancho Llimera - CV.pdf" download="">Descargar CV</a>
+            <!--<button class="download" onclick="imprimirPDF()">Descargar CV</button>-->
         </div>
     </header>
     <!--Menú de navegación con anclas (#sobre-mi, #proyectos, etc.). -->
     <nav>
+        <a href="#aboutMe" class="left">#sobre-mi</a>
 
-        <a href="#aboutMe">#sobre-mi</a>
+        <a href="#skills" class="left">#habilidades</a>
 
-        <a href="#skills">#habilidades</a>
+        <a href="#projects" class="right">#proyectos</a>
 
-        <a href="#projects">#proyectos</a>
-
-        <a href="#contact">#contacto</a>
-
+        <a href="#contact" class="right">#contacto</a>
     </nav>
-
     <!--Al menos 2 imágenes (perfil + proyecto / banner).
     Usar al menos 1 SVG (por ejemplo: icono o logo en vector). -->
 
     <!--Secciones: Sobre mí, Habilidades, Experiencia/Proyectos, Contacto. -->
     <div>
         <h2>Habilidades</h2>
+        <audio controls>
+            <source src="assets/audio/top5.m4a">
+        </audio>
     </div>
     <section id="skills">
         <h3 class="head1" id="head">
@@ -123,7 +124,8 @@
                     <p>Este programa permite obtener los precios y otra información relevante sobre los productos
                         extrayéndolos de los sitios web de los supermercados.</p>
                     <ul>
-                        <li>Python con Selenium y Pandas para obtener productos de diversos supermercados y filtrarlos</li>
+                        <li>Python con Selenium y Pandas para obtener productos de diversos supermercados y filtrarlos
+                        </li>
                         <li>Uso JSON y Firebase (noSQL online) para almacenar los datos extraídos</li>
                         <li>Creación de log para registrar ejecución y errores</li>
                         <li>Inicio de sesión y roles de usuario</li>
@@ -145,10 +147,11 @@
             </div>
         </div>
     </section>
-        <div>
+    <div>
         <h2>Sobre mi</h2>
     </div>
     <section id="aboutMe">
+        <video src="assets\video\presentacion.mp4" controls></video>
         <h3>Maquinista de línea</h3><span class="timeline">03/2025 - 09/2025</span>
         <p>Configurar y mantener funcionamiento de maquinaria para producción y envasado.</p>
 
@@ -202,19 +205,6 @@
 
 </body>
 
-<script>
-  function imprimirPDF() {
-    window.print();
-  }
-  function prepararMail() {
-    const destinatario = "fransan2294@gmail.com";
-    const asunto = "Consulta desde la web";
-    const cuerpo = "Hola,\n\nQuiero más información.\n\nGracias.";
-
-    const mailto = `mailto:${destinatario}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
-
-    window.location.href = mailto;
-  }
-</script>
+<script src="scripts/script.js"> </script>
 
 </html>

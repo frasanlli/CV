@@ -15,12 +15,24 @@ body{
   background-color: $fondo-color;
 }
 
+@keyframes entrada-header {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 header{
   background-color: $fondo-color;
   margin: auto;
   padding: 1em 0;
   display: grid;
   grid-template-columns: 60% 40%;
+  animation: entrada-header 1.8s ease-out;
   h2{
     color: #ccc;
     margin-top: 10px;
@@ -48,19 +60,60 @@ button:hover {
   cursor: pointer;
 }
 
+.curv{
+  @include responsive-button;
+  float: right;
+  background-color: $boton-color;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  border-width: 2px;
+  border-style: solid;
+  border-color: grey #5a5a5a #5a5a5a grey;
+}
+
 h1{
   color: #fff;
   font-family: fantasy;
   font-size: xx-large;
 }
 
+@keyframes entrar-izquierda {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes entrar-derecha {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 nav {
   display: flex;
   margin: 0 auto;
   font-size: medium;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1em 1em;
+  background-color: $fondo-color;
+  border-radius: 20px;
+  opacity: 0.9;
 }
 
 nav a{
+  border-radius: 20px;
   flex: 1;
   text-align: center;
   text-decoration: none;
@@ -73,6 +126,14 @@ nav a{
 a:hover {
     background-color: $nav-hover;
   }
+
+.right{
+  animation: entrar-derecha 1.5s ease-out;
+}
+
+.left{
+  animation: entrar-izquierda 1.5s ease-out;
+}
 
 section {
   border-top: 1px black solid;
@@ -216,4 +277,8 @@ p{
 
 .svg{
   width: 20px;
+}
+
+video{
+  width: 360px;
 }
