@@ -57,9 +57,8 @@
       'head5 none'
       'other none';
     #head{
-      border-top: 1px black dotted;
-      border-left: 1px black dotted;
-      padding: 0 5px;
+      border: 3px inset;
+      padding: 5px;
     }
   }
 
@@ -70,9 +69,8 @@
       'head4 head5 none'
       'ml other none';
     #head{
-      border-top: 1px black dotted;
-      border-left: 1px black dotted;
-      padding: 0 5px;
+      border: 3px inset;
+      padding: 5px;
     }
   }
 
@@ -81,8 +79,8 @@
         'head1 head2 head3 head4 head5'
         'lenguage db vc ml other';
     #head{
-      border-left: 1px black dotted;
-      padding: 0 5px;
+      border: 3px inset;
+      padding: 5px;
     }
   }
 }

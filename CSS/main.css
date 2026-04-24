@@ -21,7 +21,7 @@
 body {
   padding: 0 1em;
   text-align: justify;
-  background-color: #111;
+  background-color: #0f172a;
 }
 
 @keyframes entrada-header {
@@ -35,7 +35,7 @@ body {
   }
 }
 header {
-  background-color: #111;
+  background-color: #0f172a;
   margin: auto;
   padding: 1em 0;
   display: grid;
@@ -43,7 +43,7 @@ header {
   animation: entrada-header 1.8s ease-out;
 }
 header h2 {
-  color: #ccc;
+  color: #e5e7eb;
   margin-top: 10px;
   margin-bottom: 5px;
   font-size: 25px;
@@ -84,6 +84,7 @@ button {
 button:hover {
   background-color: rgb(71, 145, 74);
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 @media (min-width: 480px) {
@@ -108,7 +109,7 @@ button:hover {
 .curv {
   float: right;
   background-color: #0056b3;
-  color: white;
+  color: #e5e7eb;
   border-radius: 4px;
   text-decoration: none;
   border-width: 2px;
@@ -117,7 +118,7 @@ button:hover {
 }
 
 h1 {
-  color: #fff;
+  color: #e5e7eb;
   font-family: fantasy;
   font-size: xx-large;
 }
@@ -150,24 +151,26 @@ nav {
   top: 0;
   z-index: 1000;
   padding: 1em 1em;
-  background-color: #111;
+  background-color: #0f172a;
   border-radius: 20px;
   opacity: 0.9;
 }
 
 nav a {
   border-radius: 20px;
+  font-family: "Courier New", Courier, monospace;
   flex: 1;
   text-align: center;
   text-decoration: none;
   color: black;
-  background-color: #ccc;
+  background-color: #e5e7eb;
   padding: 5px;
   border: 1px black solid;
 }
 
 a:hover {
   background-color: rgb(71, 145, 74);
+  transform: scale(1.1);
 }
 
 .right {
@@ -179,8 +182,8 @@ a:hover {
 }
 
 section {
-  border-top: 1px black solid;
   padding: 1em;
+  border-radius: 5px;
 }
 
 #aboutMe {
@@ -223,8 +226,23 @@ section {
 .card {
   background: #ccc;
   border-radius: 16px;
-  padding: 0.5em 1.5em;
-  box-shadow: 0 2px 8px #5c5353;
+  padding: 1em 1.5em;
+  margin-bottom: 0.5em;
+  box-shadow: 5px 10px 20px #ccc;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 15px 35px black;
+  background: rgb(255, 195, 85);
+}
+.card:hover .box-title {
+  transition: all 0.3s ease;
+  border: 3px blue dashed;
+}
+.card:hover .box-title a {
+  color: blue;
+  text-decoration: underline;
 }
 .card li {
   padding: 0.2em 0;
@@ -254,9 +272,8 @@ section {
     grid-template: "head1 head2" "lenguage db" "head3 head4" "vc ml" "head5 none" "other none";
   }
   #skills #head {
-    border-top: 1px black dotted;
-    border-left: 1px black dotted;
-    padding: 0 5px;
+    border: 3px inset;
+    padding: 5px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -264,9 +281,8 @@ section {
     grid-template: "head1 head2 head3" "lenguage db vc" "head4 head5 none" "ml other none";
   }
   #skills #head {
-    border-top: 1px black dotted;
-    border-left: 1px black dotted;
-    padding: 0 5px;
+    border: 3px inset;
+    padding: 5px;
   }
 }
 @media (min-width: 1024px) {
@@ -274,8 +290,8 @@ section {
     grid-template: "head1 head2 head3 head4 head5" "lenguage db vc ml other";
   }
   #skills #head {
-    border-left: 1px black dotted;
-    padding: 0 5px;
+    border: 3px inset;
+    padding: 5px;
   }
 }
 #skills {
@@ -294,10 +310,22 @@ ul {
 }
 
 h2 {
-  color: #fff;
+  border-radius: 4px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  background-color: grey;
+  color: white;
+  padding: 5px;
+  margin-bottom: 0;
   margin-top: 0.5em;
-  margin-bottom: 5px;
   font-size: 25px;
+}
+
+h2.sin-borde {
+  border: none;
+  background-color: transparent;
+  padding: 0;
 }
 
 h3 {
@@ -355,7 +383,7 @@ p {
 }
 
 #contact {
-  background-color: #ccc;
+  background-color: #e5e7eb;
   display: grid;
 }
 @media (min-width: 480px) and (max-width: 768px) {
@@ -363,9 +391,8 @@ p {
     grid-template: "head1 head2" "lenguage db" "head3 head4" "vc ml" "head5 none" "other none";
   }
   #contact #head {
-    border-top: 1px black dotted;
-    border-left: 1px black dotted;
-    padding: 0 5px;
+    border: 3px inset;
+    padding: 5px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -373,9 +400,8 @@ p {
     grid-template: "head1 head2 head3" "lenguage db vc" "head4 head5 none" "ml other none";
   }
   #contact #head {
-    border-top: 1px black dotted;
-    border-left: 1px black dotted;
-    padding: 0 5px;
+    border: 3px inset;
+    padding: 5px;
   }
 }
 @media (min-width: 1024px) {
@@ -383,8 +409,8 @@ p {
     grid-template: "head1 head2 head3 head4 head5" "lenguage db vc ml other";
   }
   #contact #head {
-    border-left: 1px black dotted;
-    padding: 0 5px;
+    border: 3px inset;
+    padding: 5px;
   }
 }
 #contact span {
@@ -397,6 +423,17 @@ p {
 
 video {
   width: 360px;
+}
+
+.box-title {
+  padding: 15px 0;
+  margin-bottom: 5px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.box-image {
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

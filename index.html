@@ -14,7 +14,7 @@
     <header>
         <div class="main_info">
             <h1>Francisco Sancho Llimera</h1>
-            <h2>Desarrollador web y backend</h2>
+            <h2 class="sin-borde">Desarrollador web y backend</h2>
         </div>
         <div class="actions">
             <button class="contact" onclick="prepararMail()">Contactar</button>
@@ -32,10 +32,78 @@
 
         <a href="#contact" class="right">#contacto</a>
     </nav>
-    <!--Al menos 2 imágenes (perfil + proyecto / banner).
-    Usar al menos 1 SVG (por ejemplo: icono o logo en vector). -->
-
     <!--Secciones: Sobre mí, Habilidades, Experiencia/Proyectos, Contacto. -->
+    <div>
+        <h2>Proyectos destacados</h2>
+    </div>
+    <section id="projects">
+        <div class="promo">
+            <div class="promo-grid">
+                <div class="card">
+                    <div class="box-title">
+                        <a href="https://frasanlli.github.io/pdf_to_csv/">
+                            pdf_to_csv
+                        </a>
+                    </div>
+
+                    <p>Página web en la que cargar archivos pdf y extraer datos en formato .csv</p>
+                    <ul>
+                        <li>Uso JS y la librería pdf.js</li>
+                        <div class="box-image">
+                            <img src="assets\images\pdf_csv_example1.png" alt="Proyecto 3_1">
+                        </div>
+                        <li>Importar pdf para marcar áreas en tablas complejas.</li>
+                        <div class="box-image">
+                            <img src="assets\images\pdf_csv_example2.png" alt="Proyecto 3_2">
+                        </div>
+                        <li>Obtener plantilla de áreas para reutilizar y csv con texto marcado</li>
+                        <div class="box-image">
+                            <img src="assets\images\pdf_csv_example3.png" alt="Proyecto 3_3">
+                        </div>
+                        <li>Versión para pantallas táctiles pendiente de algunas mejoras</li>
+
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="box-title">
+                        <a href="https://github.com/frasanlli/supermarket_prices">
+                            supermarket_prices
+                        </a>
+                    </div>
+                    <div class="box-image">
+                        <img src="assets\images\database_example.png" alt="Proyecto 1_1">
+                        <img src="assets\images\execution.png" alt="Proyecto 1_2">
+                    </div>
+                    <p>Este programa permite obtener los precios y otra información relevante sobre los productos
+                        extrayéndolos de los sitios web de los supermercados.</p>
+                    <ul>
+                        <li>Python con Selenium y Pandas para obtener productos de diversos supermercados y filtrarlos
+                        </li>
+                        <li>Uso JSON y Firebase (noSQL online) para almacenar los datos extraídos</li>
+                        <li>Creación de log para registrar ejecución y errores</li>
+                        <li>Inicio de sesión y roles de usuario</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="box-title">
+                        <a href="https://github.com/frasanlli/calibration-mail">
+                            calibration-mail
+                        </a>
+                    </div>
+                    <div class="box-image">
+                        <img src="assets\images\device_status.png" alt="Proyecto 2">
+                    </div>
+                    <p>Aplicación web para gestionar herramientas en un servidor local.</p>
+                    <ul>
+                        <li>Uso de Django y base de datos sqlite3 para gestionar uso y necesidad de calibración de
+                            dispositivos de medida.</li>
+                        <li>Posibilidad de importar xlms para transferirlo a la base de datos.</li>
+                        <li>Correos automatizados con estado de los elementos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     <div>
         <h2>Habilidades</h2>
     </div>
@@ -107,51 +175,15 @@
         </ul>
     </section>
     <div>
-        <h2>Proyectos Destacados</h2>
-    </div>
-    <section id="projects">
-        <div class="promo">
-            <div class="promo-grid">
-                <div class="card">
-                    <a href="https://github.com/frasanlli/supermarket_prices">
-                        supermarket_prices
-                    </a>
-                    <img src="assets\images\database_example.png" alt="Proyecto 1_1">
-                    <img src="assets\images\execution.png" alt="Proyecto 1_2">
-                    <p>Este programa permite obtener los precios y otra información relevante sobre los productos
-                        extrayéndolos de los sitios web de los supermercados.</p>
-                    <ul>
-                        <li>Python con Selenium y Pandas para obtener productos de diversos supermercados y filtrarlos
-                        </li>
-                        <li>Uso JSON y Firebase (noSQL online) para almacenar los datos extraídos</li>
-                        <li>Creación de log para registrar ejecución y errores</li>
-                        <li>Inicio de sesión y roles de usuario</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <a href="https://github.com/frasanlli/calibration-mail">
-                        calibration-mail
-                    </a>
-                    <img src="assets\images\device_status.png" alt="Proyecto 2">
-                    <p>Aplicación web para gestionar herramientas en un servidor local.</p>
-                    <ul>
-                        <li>Uso de Django y base de datos sqlite3 para gestionar uso y necesidad de calibración de
-                            dispositivos de medida.</li>
-                        <li>Posibilidad de importar xlms para transferirlo a la base de datos.</li>
-                        <li>Correos automatizados con estado de los elementos.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div>
         <h2>Sobre mi</h2>
     </div>
     <section id="aboutMe">
-        <h3>Maquinista de línea</h3><span class="timeline">03/2025 - 09/2025</span>
+        <h3>Maquinista de línea</h3>
+        <span class="timeline">03/2025 - 09/2025</span>
         <p>Configurar y mantener funcionamiento de maquinaria para producción y envasado.</p>
 
-        <h3>Prácticas FPS</h3><span class="timeline">03/2024 - 06/2024<span>
+        <h3>Prácticas FPS</h3>
+        <span class="timeline">03/2024 - 06/2024<span>
                 <p>Desarrollo de scripts con Python usando las librerías Selenium y Pandas.</p>
                 <p>Creación de log de errores y capturas de pantalla automatizadas.</p>
 

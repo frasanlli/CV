@@ -34,7 +34,7 @@ header{
   grid-template-columns: 60% 40%;
   animation: entrada-header 1.8s ease-out;
   h2{
-    color: #ccc;
+    color: $fuente-color-titulos;
     margin-top: 10px;
     margin-bottom: 5px;
     font-size: 25px;
@@ -58,13 +58,14 @@ button{
 button:hover {
   background-color: rgb(71, 145, 74);
   cursor: pointer;
+  transform: scale(1.1)
 }
 
 .curv{
   @include responsive-button;
   float: right;
   background-color: $boton-color;
-  color: white;
+  color: $fuente-color-titulos;
   border-radius: 4px;
   text-decoration: none;
   border-width: 2px;
@@ -73,7 +74,7 @@ button:hover {
 }
 
 h1{
-  color: #fff;
+  color: $fuente-color-titulos;
   font-family: fantasy;
   font-size: xx-large;
 }
@@ -114,6 +115,7 @@ nav {
 
 nav a{
   border-radius: 20px;
+  font-family: 'Courier New', Courier, monospace;
   flex: 1;
   text-align: center;
   text-decoration: none;
@@ -125,6 +127,7 @@ nav a{
 
 a:hover {
     background-color: $nav-hover;
+    transform: scale(1.10);
   }
 
 .right{
@@ -136,8 +139,8 @@ a:hover {
 }
 
 section {
-  border-top: 1px black solid;
   padding: 1em;
+  border-radius: 5px;
 }
 
 #aboutMe{
@@ -164,8 +167,24 @@ section {
 .card{
   background: #ccc;
   border-radius: 16px;
-  padding: 0.5em 1.5em;
-  box-shadow: 0 2px 8px #5c5353;
+  padding: 1em 1.5em;
+  margin-bottom: 0.5em;
+  box-shadow: 5px 10px 20px #ccc;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px) scale(1.10);
+    box-shadow: 0 15px 35px black;
+    background: rgb(255, 195, 85);
+    .box-title{
+      transition: all 0.3s ease;
+      border: 3px blue dashed;
+      a{
+        color:blue;
+        text-decoration: underline;
+      }
+    }
+  }
   li{
     padding: 0.2em 0;
     margin-left: 1em;
@@ -197,6 +216,7 @@ section {
     border-left: 1px black dotted;
     padding-left: 5px;
   }
+
 }
 
 ul{
@@ -204,11 +224,23 @@ ul{
   margin-left: 0;
 }
 
-h2{
-  color: #fff;
+h2 {
+  border-radius: 4px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  background-color: grey;
+  color: white;
+  padding: 5px;
+  margin-bottom: 0;
   margin-top: 0.5em;
-  margin-bottom: 5px;
   font-size: 25px;
+}
+
+h2.sin-borde {
+  border: none;
+  background-color: transparent;
+  padding: 0;
 }
 
 h3{
@@ -281,4 +313,15 @@ p{
 
 video{
   width: 360px;
+}
+
+.box-title{
+  padding: 15px 0;
+  margin-bottom: 5px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.box-image{
+  text-align: center;
 }
