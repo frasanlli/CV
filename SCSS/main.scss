@@ -110,7 +110,12 @@ nav {
   padding: 1em 1em;
   background-color: $fondo-color;
   border-radius: 20px;
-  opacity: 0.9;
+  opacity: 0.8;
+
+  &:hover{
+    transition: opacity 0.1s ease;
+    opacity: 1;
+  }
 }
 
 nav a{

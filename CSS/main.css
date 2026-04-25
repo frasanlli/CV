@@ -153,7 +153,11 @@ nav {
   padding: 1em 1em;
   background-color: #0f172a;
   border-radius: 20px;
-  opacity: 0.9;
+  opacity: 0.8;
+}
+nav:hover {
+  transition: opacity 0.1s ease;
+  opacity: 1;
 }
 
 nav a {
