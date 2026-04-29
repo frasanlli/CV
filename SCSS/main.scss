@@ -10,9 +10,18 @@
 }
 
 body{
+  font-family: $fuente-principal;
   padding: 0 1em;
   text-align: justify;
-  background-color: $fondo-color;
+  background: linear-gradient(270deg, #0f2027, #203a43, #2c5364, #0f2027);
+  background-size: 300% 100%;
+  animation: moverGradiente 5s ease-in-out infinite alternate;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  height: min-content;
 }
 
 @keyframes entrada-header {
@@ -26,6 +35,15 @@ body{
   }
 }
 
+@keyframes moverGradiente {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 header{
   background-color: $fondo-color;
   margin: auto;
@@ -33,6 +51,7 @@ header{
   display: grid;
   grid-template-columns: 60% 40%;
   animation: entrada-header 1.8s ease-out;
+  background: transparent;
   h2{
     color: $fuente-color-titulos;
     margin-top: 10px;
@@ -50,13 +69,15 @@ header{
 button{
   @include responsive-button;
   float: right;
-  background-color: $boton-color;
+  background-color: $btn-color;
   color: white;
-  border-radius: 4px;
+  border-radius: 40px;
+  transition-duration: 0.5s;
 }
 
 button:hover {
-  background-color: rgb(71, 145, 74);
+  background-color: $btn-hover;
+  border-radius: 4px;
   cursor: pointer;
   transform: scale(1.1)
 }
@@ -64,18 +85,24 @@ button:hover {
 .curv{
   @include responsive-button;
   float: right;
-  background-color: $boton-color;
+  background-color: $btn-color;
   color: $fuente-color-titulos;
-  border-radius: 4px;
+  border-radius: 40px;
   text-decoration: none;
   border-width: 2px;
   border-style: solid;
   border-color: grey #5a5a5a #5a5a5a grey;
+  transition-duration: 0.5s;
 }
+
+.curv:hover{
+    background-color: $btn-hover;
+    border-radius: 4px;
+    transform: scale(1.1)
+  }
 
 h1{
   color: $fuente-color-titulos;
-  font-family: fantasy;
   font-size: xx-large;
 }
 
@@ -107,10 +134,11 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: auto;
   padding: 1em 1em;
-  background-color: $fondo-color;
   border-radius: 20px;
   opacity: 0.8;
+  background: transparent;
 
   &:hover{
     transition: opacity 0.1s ease;
@@ -120,20 +148,22 @@ nav {
 
 nav a{
   border-radius: 20px;
-  font-family: 'Courier New', Courier, monospace;
   flex: 1;
   text-align: center;
-  text-decoration: none;
-  color: black;
   background-color: $nav-color;
   padding: 5px;
   border: 1px black solid;
-}
+  transition-duration: 0.3s;
 
-a:hover {
+  &:hover {
     background-color: $nav-hover;
     transform: scale(1.10);
+    border-radius: 10px;
+    border-color: grey #5a5a5a #5a5a5a grey;
   }
+}
+
+
 
 .right{
   animation: entrar-derecha 1.5s ease-out;
@@ -148,19 +178,15 @@ section {
   border-radius: 5px;
 }
 
-#aboutMe{
-  background-color: $color-main;
-}
-
 .promo{
   margin: auto 5em;
 }
 
-.promo a{
-  text-decoration: none;
+.promo h4{
   color: black;
   font-size: 30px;
-  margin: 1em auto;
+  margin-bottom: 2vh;
+  //margin: 1vh auto;
 }
 
 .promo-grid{
@@ -170,24 +196,19 @@ section {
 }
 
 .card{
-  background: #ccc;
+  background: $nav-color;
   border-radius: 16px;
   padding: 1em 1.5em;
   margin-bottom: 0.5em;
-  box-shadow: 5px 10px 20px #ccc;
+  box-shadow: 5px 0px 20px black;
   transition: all 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px) scale(1.10);
-    box-shadow: 0 15px 35px black;
-    background: rgb(255, 195, 85);
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 15px 35px $nav-color;
+    background: $background-hover;
     .box-title{
       transition: all 0.3s ease;
-      border: 3px blue dashed;
-      a{
-        color:blue;
-        text-decoration: underline;
-      }
     }
   }
   p{
@@ -236,19 +257,20 @@ h2 {
   border-radius: 4px;
   border-top: 2px solid;
   border-left: 2px solid;
-  border-right: 2px solid;
-  background-color: grey;
-  color: white;
+  border-color: $nav-color;
+  color: $fuente-color-titulos;
   padding: 5px;
   margin-bottom: 0;
   margin-top: 0.5em;
   font-size: 25px;
+  width: fit-content;
 }
 
 h2.sin-borde {
   border: none;
   background-color: transparent;
   padding: 0;
+
 }
 
 h3{
@@ -298,11 +320,12 @@ p{
 }
 
 #projects{
-  background-color: $color-main;
+  background-color: trans;
 }
 
-#education{
+#education, #aboutMe, #skills{
   background-color: $color-main;
+  opacity: 0.7;
 }
 
 #contact{
@@ -325,10 +348,7 @@ video{
 }
 
 .box-title{
-  padding: 15px 0;
-  margin-bottom: 5px;
   text-align: center;
-  border-radius: 10px;
 }
 
 .box-image{
