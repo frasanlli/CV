@@ -13,7 +13,7 @@ body{
   font-family: $fuente-principal;
   padding: 0 1em;
   text-align: justify;
-  background: linear-gradient(270deg, #0f2027, #203a43, #2c5364, #0f2027);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364, #0f2027);
   background-size: 300% 100%;
   animation: moverGradiente 5s ease-in-out infinite alternate;
 }
@@ -22,6 +22,12 @@ a{
   text-decoration: none;
   color: black;
   height: min-content;
+}
+
+main{
+  border-radius: 5px;
+  border: 2px solid;
+  border-color: $nav-color;
 }
 
 @keyframes entrada-header {
@@ -66,7 +72,7 @@ header{
   align-content: end
 }
 
-button{
+.contact{
   @include responsive-button;
   float: right;
   background-color: $btn-color;
@@ -75,7 +81,7 @@ button{
   transition-duration: 0.5s;
 }
 
-button:hover {
+.contact:hover {
   background-color: $btn-hover;
   border-radius: 4px;
   cursor: pointer;
@@ -127,55 +133,9 @@ h1{
     transform: translateX(0);
   }
 }
-nav {
-  display: flex;
-  margin: 0 auto;
-  font-size: medium;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  width: auto;
-  padding: 1em 1em;
-  border-radius: 20px;
-  opacity: 0.8;
-  background: transparent;
-
-  &:hover{
-    transition: opacity 0.1s ease;
-    opacity: 1;
-  }
-}
-
-nav a{
-  border-radius: 20px;
-  flex: 1;
-  text-align: center;
-  background-color: $nav-color;
-  padding: 5px;
-  border: 1px black solid;
-  transition-duration: 0.3s;
-
-  &:hover {
-    background-color: $nav-hover;
-    transform: scale(1.10);
-    border-radius: 10px;
-    border-color: grey #5a5a5a #5a5a5a grey;
-  }
-}
-
-
-
-.right{
-  animation: entrar-derecha 1.5s ease-out;
-}
-
-.left{
-  animation: entrar-izquierda 1.5s ease-out;
-}
 
 section {
   padding: 1em;
-  border-radius: 5px;
 }
 
 .promo{
@@ -204,7 +164,7 @@ section {
   transition: all 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px) scale(1.08);
+    transform: translateY(-5px) scale(1.05);
     box-shadow: 0 15px 35px $nav-color;
     background: $background-hover;
     .box-title{
@@ -253,17 +213,46 @@ ul{
   margin-left: 0;
 }
 
-h2 {
+.tab-bar{
+  display:flex
+}
+
+.tab {
+  background-color: transparent;
   border-radius: 4px;
   border-top: 2px solid;
   border-left: 2px solid;
-  border-color: $nav-color;
+  border-right: 0;
+  border-bottom: 0;
+  border-color: grey #5a5a5a #5a5a5a grey;
   color: $fuente-color-titulos;
-  padding: 5px;
+  padding: 5px 10px;
   margin-bottom: 0;
-  margin-top: 0.5em;
   font-size: 25px;
   width: fit-content;
+  transition-duration: 0.3s;
+
+  &:hover {
+    margin-top: 0.60em;
+    background-color: $nav-hover;
+    color: black;
+    border-color: $nav-color;
+  }
+
+  &.activo {
+    margin-top: 0.5em;
+    background-color: $nav-color;
+    color: black;
+    border-color: $nav-color;
+  }
+  &:not(.activo){
+    margin-top: 0.65em;
+  }
+}
+
+.end-tab{
+  border-right: 2px solid;
+  border-color: grey #5a5a5a #5a5a5a grey;
 }
 
 h2.sin-borde {

@@ -10,3 +10,30 @@ function prepararMail() {
 
   window.location.href = mailto;
 }
+
+const app = document.querySelector("main.panel");
+const btn_proyectos = document.querySelector("button[data-page='proyectos']");
+
+async function cargarPagina(btn) {
+  const allTabs = document.querySelectorAll(".tab");
+  allTabs.forEach(tab => tab.classList.remove("activo"));
+  btn.classList.add("activo");
+
+  const nombre = btn.dataset.page;
+  const respuesta = await fetch(`pages/${nombre}.html`);
+
+  const html = await respuesta.text();
+
+  app.innerHTML = html;
+
+}
+
+document.querySelectorAll("button").forEach(btn => {
+
+  btn.addEventListener("click", () => {
+    cargarPagina(btn);
+  });
+
+});
+
+cargarPagina(btn_proyectos);

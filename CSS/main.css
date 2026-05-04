@@ -22,7 +22,7 @@ body {
   font-family: "Space Grotesk", sans-serif;
   padding: 0 1em;
   text-align: justify;
-  background: linear-gradient(270deg, #0f2027, #203a43, #2c5364, #0f2027);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364, #0f2027);
   background-size: 300% 100%;
   animation: moverGradiente 5s ease-in-out infinite alternate;
 }
@@ -31,6 +31,12 @@ a {
   text-decoration: none;
   color: black;
   height: min-content;
+}
+
+main {
+  border-radius: 5px;
+  border: 2px solid;
+  border-color: #ccc;
 }
 
 @keyframes entrada-header {
@@ -74,25 +80,25 @@ header h2 {
 }
 
 @media (min-width: 480px) {
-  button {
+  .contact {
     margin-left: 0.5em;
     margin-bottom: 0.5em;
     padding: 1em 0.5em;
   }
 }
 @media (min-width: 768px) {
-  button {
+  .contact {
     margin-left: 0.5em;
     padding: 1em 0.5em;
   }
 }
 @media (min-width: 1024px) {
-  button {
+  .contact {
     margin-left: 0.5em;
     padding: 1.5em 1em;
   }
 }
-button {
+.contact {
   float: right;
   background-color: #5b4b9a;
   color: white;
@@ -100,7 +106,7 @@ button {
   transition-duration: 0.5s;
 }
 
-button:hover {
+.contact:hover {
   background-color: #7467a8;
   border-radius: 4px;
   cursor: pointer;
@@ -169,51 +175,8 @@ h1 {
     transform: translateX(0);
   }
 }
-nav {
-  display: flex;
-  margin: 0 auto;
-  font-size: medium;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  width: auto;
-  padding: 1em 1em;
-  border-radius: 20px;
-  opacity: 0.8;
-  background: transparent;
-}
-nav:hover {
-  transition: opacity 0.1s ease;
-  opacity: 1;
-}
-
-nav a {
-  border-radius: 20px;
-  flex: 1;
-  text-align: center;
-  background-color: #ccc;
-  padding: 5px;
-  border: 1px black solid;
-  transition-duration: 0.3s;
-}
-nav a:hover {
-  background-color: #9fbdd4;
-  transform: scale(1.1);
-  border-radius: 10px;
-  border-color: grey #5a5a5a #5a5a5a grey;
-}
-
-.right {
-  animation: entrar-derecha 1.5s ease-out;
-}
-
-.left {
-  animation: entrar-izquierda 1.5s ease-out;
-}
-
 section {
   padding: 1em;
-  border-radius: 5px;
 }
 
 .promo {
@@ -252,7 +215,7 @@ section {
   transition: all 0.3s ease;
 }
 .card:hover {
-  transform: translateY(-5px) scale(1.08);
+  transform: translateY(-5px) scale(1.05);
   box-shadow: 0 15px 35px #ccc;
   background: #b8c6d1;
 }
@@ -327,17 +290,44 @@ ul {
   margin-left: 0;
 }
 
-h2 {
+.tab-bar {
+  display: flex;
+}
+
+.tab {
+  background-color: transparent;
   border-radius: 4px;
   border-top: 2px solid;
   border-left: 2px solid;
-  border-color: #ccc;
+  border-right: 0;
+  border-bottom: 0;
+  border-color: grey #5a5a5a #5a5a5a grey;
   color: #e5e7eb;
-  padding: 5px;
+  padding: 5px 10px;
   margin-bottom: 0;
-  margin-top: 0.5em;
   font-size: 25px;
   width: fit-content;
+  transition-duration: 0.3s;
+}
+.tab:hover {
+  margin-top: 0.6em;
+  background-color: #9fbdd4;
+  color: black;
+  border-color: #ccc;
+}
+.tab.activo {
+  margin-top: 0.5em;
+  background-color: #ccc;
+  color: black;
+  border-color: #ccc;
+}
+.tab:not(.activo) {
+  margin-top: 0.65em;
+}
+
+.end-tab {
+  border-right: 2px solid;
+  border-color: grey #5a5a5a #5a5a5a grey;
 }
 
 h2.sin-borde {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,8 +11,6 @@
 
 <body>
 
-    <!--Cabecera con nombre, título profesional y CTA (botón “Contactar” /
-“Descargar CV”).-->
     <header>
         <div class="main_info">
             <h1>Francisco Sancho Llimera</h1>
@@ -24,203 +22,14 @@
             <!--<button class="download" onclick="imprimirPDF()">Descargar CV</button>-->
         </div>
     </header>
-    <!--Menú de navegación con anclas (#sobre-mi, #proyectos, etc.). -->
-    <nav>
-        <a href="#aboutMe" class="left">#sobre-mi</a>
-
-        <a href="#skills" class="left">#habilidades</a>
-
-        <a href="#projects" class="right">#proyectos</a>
-
-        <a href="#contact" class="right">#contacto</a>
-    </nav>
-    <!--Secciones: Sobre mí, Habilidades, Experiencia/Proyectos, Contacto. -->
-    <div>
-        <h2>Proyectos destacados</h2>
+    <div class="tab-bar">
+        <button class="tab" data-page="proyectos">Proyectos destacados</button>
+        <button class="tab" data-page="habilidades">Habilidades</button>
+        <button class="tab end-tab" data-page="sobre_mi">Sobre mi</button>
     </div>
-    <section id="projects">
-        <div class="promo">
-            <div class="promo-grid">
-                <a href="https://frasanlli.github.io/pdf_to_csv/">
-                    <div class="card">
-                        <div class="box-title">
-                            <h4>pdf_to_csv</h4>
-                        </div>
+    <main class="panel">
 
-                        <div class="box-image">
-                            <video src="assets\video\pdf_to_csv.mp4" controls></video>
-                        </div>
-                        <p>Página web en la que cargar archivos pdf y extraer datos en formato .csv</p>
-                        <ul>
-                            <li>Uso JS y la librería pdf.js</li>
-                            <li>Importar pdf para marcar áreas en tablas complejas.</li>
-                            <li>Obtener plantilla de áreas para reutilizar y csv con texto marcado</li>
-                            <li>Versión para pantallas táctiles pendiente de algunas mejoras</li>
-                        </ul>
-
-                    </div>
-                </a>
-
-
-                <a href="https://github.com/frasanlli/calibration-mail">
-                    <div class="card">
-
-                        <div class="box-title">
-                            <h4>
-                                calibration-mail
-                            </h4>
-                        </div>
-                        <div class="box-image">
-                            <img src="assets\images\device_status.png" alt="Proyecto 2">
-                        </div>
-                        <p>Aplicación web para gestionar herramientas en un servidor local.</p>
-                        <ul>
-                            <li>Uso de Django y base de datos sqlite3 para gestionar uso y necesidad de calibración de
-                                dispositivos de medida.</li>
-                            <li>Posibilidad de importar xlms para transferirlo a la base de datos.</li>
-                            <li>Correos automatizados con estado de los elementos.</li>
-                        </ul>
-
-                    </div>
-                </a>
-                <a href="https://github.com/frasanlli/supermarket_prices">
-                    <div class="card">
-                        <div class="box-title">
-                            <h4>
-                                supermarket_prices
-                            </h4>
-                        </div>
-                        <div class="box-image">
-                            <img src="assets\images\database_example.png" alt="Proyecto 1_1">
-                            <img src="assets\images\execution.png" alt="Proyecto 1_2">
-                        </div>
-                        <p>Este programa permite obtener los precios y otra información relevante sobre los productos
-                            extrayéndolos de los sitios web de los supermercados.</p>
-                        <ul>
-                            <li>Python con Selenium y Pandas para obtener productos de diversos supermercados y
-                                filtrarlos
-                            </li>
-                            <li>Uso JSON y Firebase (noSQL online) para almacenar los datos extraídos</li>
-                            <li>Creación de log para registrar ejecución y errores</li>
-                            <li>Inicio de sesión y roles de usuario</li>
-                        </ul>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <div>
-        <h2>Habilidades</h2>
-    </div>
-    <section id="skills">
-        <h3 class="head1" id="head">
-            Programación
-        </h3>
-        <h3 class="head2" id="head">
-            Bases de datos
-        </h3>
-        <h3 class="head3" id="head">
-            Lenguaje de marcas
-        </h3>
-        <h3 class="head4" id="head">
-            Control de versiones
-        </h3>
-        <h3 class="head5" id="head">
-            Otros
-        </h3>
-
-        <ul class="lenguage">
-            <li>
-                Python
-            </li>
-            <li>
-                JavaScript
-            </li>
-            <li>
-                Java
-            </li>
-            <li>
-                Kotlin
-            </li>
-        </ul>
-        <ul class="db">
-            <li>
-                MySQL
-            </li>
-            <li>
-                MongoDB
-            </li>
-            <li>
-                Firebase
-            </li>
-        </ul>
-        <ul class="vc">
-            <li>
-                GIT
-            </li>
-        </ul>
-        <ul class="ml">
-            <li>
-                JSON
-            </li>
-            <li>
-                XML
-            </li>
-            <li>
-                CSS
-            </li>
-            <li>
-                SCSS
-            </li>
-        </ul>
-        <ul class="other">
-            <li>
-                Pack MS Office 365
-            </li>
-        </ul>
-    </section>
-    <div>
-        <h2>Sobre mi</h2>
-    </div>
-    <section id="aboutMe">
-        <h3>Maquinista de línea</h3>
-        <span class="timeline">03/2025 - 09/2025</span>
-        <p>Configurar y mantener funcionamiento de maquinaria para producción y envasado.</p>
-
-        <h3>Prácticas FPS</h3>
-        <span class="timeline">03/2024 - 06/2024<span>
-                <p>Desarrollo de scripts con Python usando las librerías Selenium y Pandas.</p>
-                <p>Creación de log de errores y capturas de pantalla automatizadas.</p>
-
-                <h3>Stadler Rail – Técnico pruebas tipo</h3><span class="timeline">3 años</span>
-                <p>Organizar y realizar pruebas funcionales en inglés.</p>
-                <p>Diseñar procedimientos de prueba funcional y homologación.</p>
-                <p>Detectar, comunicar y resolver problemas funcionales.</p>
-                <p>Realizar pruebas en instalaciones europeas</p>
-    </section>
-    <div>
-        <h2>Educación</h2>
-    </div>
-    <section id="education">
-        <h3>
-            CFPS Desarrollo de aplicaciones web
-        </h3>
-        <p>
-            09/2025 - Actualidad
-        </p>
-        <h3>
-            CFPS Desarrollo de aplicaciones multiplataforma
-        </h3>
-        <p>
-            09/2022 - 06/2024
-        </p>
-        <h3>
-            Ingeniería eléctrica - UPV
-        </h3>
-        <p>2016 – 2021</p>
-        <p>Erasmus en Praga, República Checa</p>
-        <p>Pendiente TFG</p>
-    </section>
+    </main>
     <section id="contact">
         <span>
             <img class="svg" src="assets\images\house.svg" alt="github">
