@@ -27,10 +27,15 @@ body {
   animation: moverGradiente 5s ease-in-out infinite alternate;
 }
 
-a {
+a:not(.defaultLink) {
   text-decoration: none;
   color: black;
   height: min-content;
+}
+
+.defaultLink:hover {
+  background-color: #9fbdd4;
+  cursor: pointer;
 }
 
 main {
@@ -136,7 +141,7 @@ header h2 {
 .curv {
   float: right;
   background-color: #2f649c;
-  color: #e5e7eb;
+  color: #e5e7eb !important;
   border-radius: 40px;
   text-decoration: none;
   border-width: 2px;
@@ -262,7 +267,7 @@ section {
 }
 @media (min-width: 480px) and (max-width: 768px) {
   #skills {
-    grid-template: "head1 head2" "lenguage db" "head3 head4" "vc ml" "head5 none" "other none";
+    grid-template: "head1 head2" "lenguage db" "head3 head4" "vc ml" "head5 head6" "other lengauge";
   }
   #skills #head {
     border: 3px inset;
@@ -271,7 +276,7 @@ section {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   #skills {
-    grid-template: "head1 head2 head3" "lenguage db vc" "head4 head5 none" "ml other none";
+    grid-template: "head1 head2 head3" "lenguage db vc" "head4 head5 head6" "ml other lengauge";
   }
   #skills #head {
     border: 3px inset;
@@ -280,7 +285,7 @@ section {
 }
 @media (min-width: 1024px) {
   #skills {
-    grid-template: "head1 head2 head3 head4 head5" "lenguage db vc ml other";
+    grid-template: "head1 head2 head3 head4 head5 head6" "lenguage db vc ml other lengauge";
   }
   #skills #head {
     border: 3px inset;
@@ -378,6 +383,10 @@ p {
   grid-area: head5;
 }
 
+.head6 {
+  grid-area: head6;
+}
+
 .lenguage {
   grid-area: lenguage;
 }
@@ -412,7 +421,7 @@ p {
 }
 @media (min-width: 480px) and (max-width: 768px) {
   #contact {
-    grid-template: "head1 head2" "lenguage db" "head3 head4" "vc ml" "head5 none" "other none";
+    grid-template: "head1 head2" "lenguage db" "head3 head4" "vc ml" "head5 head6" "other lengauge";
   }
   #contact #head {
     border: 3px inset;
@@ -421,7 +430,7 @@ p {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   #contact {
-    grid-template: "head1 head2 head3" "lenguage db vc" "head4 head5 none" "ml other none";
+    grid-template: "head1 head2 head3" "lenguage db vc" "head4 head5 head6" "ml other lengauge";
   }
   #contact #head {
     border: 3px inset;
@@ -430,7 +439,7 @@ p {
 }
 @media (min-width: 1024px) {
   #contact {
-    grid-template: "head1 head2 head3 head4 head5" "lenguage db vc ml other";
+    grid-template: "head1 head2 head3 head4 head5 head6" "lenguage db vc ml other lengauge";
   }
   #contact #head {
     border: 3px inset;

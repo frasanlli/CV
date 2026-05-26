@@ -18,10 +18,14 @@ body{
   animation: moverGradiente 5s ease-in-out infinite alternate;
 }
 
-a{
+a:not(.defaultLink) {
   text-decoration: none;
   color: black;
   height: min-content;
+}
+.defaultLink:hover {
+  background-color: $btn-hover;
+  cursor: pointer;
 }
 
 main{
@@ -93,7 +97,7 @@ header{
   @include responsive-button;
   float: right;
   background-color: $btn-color;
-  color: $fuente-color-titulos;
+  color: $fuente-color-titulos !important;
   border-radius: 40px;
   text-decoration: none;
   border-width: 2px;
@@ -304,6 +308,9 @@ p{
 
 .head5{
   grid-area: head5;
+}
+.head6{
+  grid-area: head6;
 }
 
 .lenguage {
