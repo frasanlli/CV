@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Curriculum Landing Page Multimedia</title>
+    <title data-i18n="title">Curriculum Landing Page Multimedia</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="CSS/main.css" type="text/css" rel="stylesheet" media="all">
@@ -14,39 +14,45 @@
     <header>
         <div class="main_info">
             <h1>Francisco Sancho Llimera</h1>
-            <h2 class="sin-borde">Desarrollador web y backend</h2>
+            <h2 class="sin-borde" data-i18n="developer">Desarrollador web y backend</h2>
         </div>
         <div class="actions">
-            <button class="contact" onclick="prepararMail()">Contactar</button>
-            <a class="curv" href="assets/Francisco Sancho Llimera - CV.pdf" download="">Descargar CV</a>
+            <button class="contact" onclick="prepararMail()" data-i18n="contact" >Contactar</button>
+            <a class="curv" href="assets/Francisco Sancho Llimera - CV.pdf" data-i18n="downcv" >Descargar CV</a>
             <!--<button class="download" onclick="imprimirPDF()">Descargar CV</button>-->
+            <select id="langSelect">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
         </div>
     </header>
     <div class="tab-bar">
-        <button class="tab" data-page="proyectos">Proyectos destacados</button>
-        <button class="tab" data-page="habilidades">Habilidades</button>
-        <button class="tab end-tab" data-page="sobre_mi">Sobre mi</button>
+        <button class="tab" data-page="proyectos" data-i18n="projects">Proyectos destacados</button>
+        <button class="tab" data-page="habilidades" data-i18n="skills">Habilidades</button>
+        <button class="tab end-tab" data-page="sobre_mi" data-i18n="aboutme">Sobre mi</button>
+
     </div>
     <main class="panel">
 
     </main>
     <section id="contact">
         <span>
-            <img class="svg" src="assets\images\house.svg" alt="github">
-            Valencia, España
+            <img class="svg" src="assets\images\house.svg" alt="github" >
+            <span data-i18n="location"></span>
         </span>
         <span>
-            <img class="svg" src="assets\images\email.svg" alt="github">
-            <a onclick="prepararMail()">¡Pulsa para contactarme!</a>
+            <img class="svg" src="assets\images\email.svg" alt="github" >
+            <a data-i18n="clickme" onclick="prepararMail() ">¡Pulsa para contactarme!</a>
         </span>
         <span>
-            <img class="svg" src="assets\images\github.svg" alt="github">
+            <img class="svg" src="assets\images\github.svg" alt="github" >
             <a href="https://github.com/frasanlli">github.com/frasanlli</a>
         </span>
     </section>
 
 </body>
 
-<script src="scripts/script.js"> </script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
 
 </html>

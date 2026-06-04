@@ -11,9 +11,6 @@ function prepararMail() {
   window.location.href = mailto;
 }
 
-const app = document.querySelector("main.panel");
-const btn_proyectos = document.querySelector("button[data-page='proyectos']");
-
 async function cargarPagina(btn) {
   const allTabs = document.querySelectorAll(".tab");
   allTabs.forEach(tab => tab.classList.remove("activo"));
@@ -25,8 +22,22 @@ async function cargarPagina(btn) {
   const html = await respuesta.text();
 
   app.innerHTML = html;
+  await i18n.apply();
 
 }
+
+const app = document.querySelector("main.panel");
+  const btn_proyectos = document.querySelector("button[data-page='proyectos']");
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await i18n.init();
+  cargarPagina(btn_proyectos);
+});
+
+document.getElementById("langSelect").addEventListener("change", async (e) => {
+    await i18n.changeLanguage(e.target.value);
+    i18n.apply();
+  });
 
 document.querySelectorAll("button").forEach(btn => {
 
@@ -36,4 +47,5 @@ document.querySelectorAll("button").forEach(btn => {
 
 });
 
-cargarPagina(btn_proyectos);
+
+

@@ -1,0 +1,71 @@
+{
+  "title": "Porfolio Landing Page",
+  "developer": "Fullstack developer",
+  "contact": "Contact",
+  "downcv": "Download CV",
+  "projects": "Projects",
+  "skills": "Skills",
+  "aboutme": "About me",
+  "location": "Valencia, Spain",
+  "clickme": "Click to contact!",
+  "programming": "Programming",
+  "database": "Database",
+  "markupleng": "Markup language",
+  "version": "Version control",
+  "others": "Others",
+  "lenguages": "Lenguages",
+  "python": "Python [Libraries: Pandas & Selenium]",
+  "javascript": "JavaScript [Libraries: React & Selenium]",
+  "electricity": "Understand electrical schematics",
+  "testing": "Functional testing",
+  "english": "English (C1)",
+
+  "infoproject1": "Web application to upload PDF files and extract data into .csv format from complex tables.",
+  "listproject1_1": "JavaScript using the pdf.js library.",
+  "listproject1_2": "Import PDFs to define areas within complex tables.",
+  "listproject1_3": "Generate reusable area templates and export annotated CSV files.",
+  "listproject1_4": "Touchscreen version with pending improvements.",
+
+  "infoproject2": "Web application designed to run on a local server for tool calibration management.",
+  "listproject2_1": "Built with Django and an SQLite3 database to manage tool usage and calibration requirements.",
+  "listproject2_2": "Ability to import XLSX files into the database.",
+  "listproject2_3": "Automated emails providing status updates of tools.",
+  "listproject2_4": "User authentication and role-based access control.",
+
+  "infoproject3": "This program allows you to obtain relevant information about supermarket products by extracting it from supermarket websites.",
+  "listproject3_1": "Python with Selenium and Pandas to scrape product data from various websites.",
+  "listproject3_2": "JSON and Firebase (online NoSQL database) to store the data.",
+  "listproject3_3": "Creation of logs to record execution and errors.",
+
+  "experience": "Working experience",
+  "interntitle1": "CEED - Intern - QA developer",
+  "timelineintern": "04/2024 - Now",
+  "interninfo1_1": "Microservices architecture to reduce bureaucracy.",
+  "interninfo1_2": "Development of front-end scripts using JavaScript and Tailwind CSS.",
+  "interninfo1_3": "Detection of Front-end (React) and Back-end (Laravel) errors.",
+  "interninfo1_4": "Use of Docker for infrastructure.",
+  "interninfo1_5": "Testing on Ubuntu and Windows systems.",
+
+  "job1": "Production Line Operator",
+  "jobinfo1_1": "Set up and maintain production and packaging machinery.",
+
+  "interntitle2": "Intern - Multiplatform developer",
+  "interninfo2_1": "Developed Python scripts using the Selenium and Pandas libraries.",
+  "interninfo2_2": "Created automated error logs and screenshot capture systems.",
+
+  "job2": "Stadler Rail – QA Type testing",
+  "jobinfo2_1": "Organize and perform functional testing in English.",
+  "jobinfo2_2": "Design functional testing and validation procedures.",
+  "jobinfo2_3": "Identify, report, and resolve functional issues.",
+  "jobinfo2_4": "Conduct testing at European facilities.",
+
+  "education": "Education",
+  "edutitle1": "HNC Web app developer",
+  "edutimeline1": "09/2025 - Now",
+
+  "edutitle2": "HNC Multiplatform's developer",
+  "edutitle3": "Electrical engineering - UPV",
+  "erasmus": "Erasmus in Prague, Czech Republic",
+  "tfg": "Pending final project"
+
+}

@@ -1,0 +1,71 @@
+{
+  "title": "Curriculum Landing Page Multimedia",
+  "developer": "Desarrollador web y backend",
+  "contact": "Contactar",
+  "downcv": "Descargar CV",
+  "projects": "Proyectos destacados",
+  "skills": "Habilidades",
+  "aboutme": "Sobre mi",
+  "location": "Valencia, España",
+  "clickme": "¡Pulsa para contactarme!",
+  "programming": "Programación",
+  "database": "Bases de datos",
+  "markupleng": "Lenguaje de marcas",
+  "version": "Control de versiones",
+  "others": "Otros",
+  "lenguages": "Idiomas",
+  "python": "Python (Librerías Pandas y Selenium)",
+  "javascript": "JavaScript (Librerías React y Selenium)",
+  "electricity": "Interpretar esquemas eléctricos",
+  "testing": "Pruebas funcionales",
+  "english": "Inglés (C1)",
+
+  "infoproject1": "Página web en la que cargar archivos pdf y extraer datos en formato .csv",
+  "listproject1_1": "Uso JS y la librería pdf.js",
+  "listproject1_2": "Importar pdf para marcar áreas en tablas complejas.",
+  "listproject1_3": "Obtener plantilla de áreas para reutilizar y csv con texto marcado.",
+  "listproject1_4": "Versión para pantallas táctiles pendiente de algunas mejoras.",
+
+  "infoproject2": "Aplicación web para gestionar herramientas en un servidor local.",
+  "listproject2_1": "Uso de Django y base de datos sqlite3 para gestionar uso y necesidad de calibración de dispositivos de medida.",
+  "listproject2_2": "Posibilidad de importar xlms para transferirlo a la base de datos.",
+  "listproject2_3": "Correos automatizados con estado de los elementos.",
+  "listproject2_4": "Inicio de sesión y roles de usuario.",
+
+  "infoproject3": "Este programa permite obtener los precios y otra información relevante sobre los productos extrayéndolos de los sitios web de los supermercados.",
+  "listproject3_1": "Python con Selenium y Pandas para obtener productos de diversos supermercados y filtrarlos.",
+  "listproject3_2": "Uso JSON y Firebase (noSQL online) para almacenar los datos extraídos.",
+  "listproject3_3": "Creación de log para registrar ejecución y errores.",
+
+  "experience": "Experiencia",
+  "interntitle1": "CEED - Prácticas CFPS Desarrollo aplicaciones Web",
+  "timelineintern": "04/2024 - Actualidad",
+  "interninfo1_1": "Multiproyecto de microservicios",
+  "interninfo1_2": "Desarrollo de scripts Front-end con JavaScript Tailwind.",
+  "interninfo1_3": "Detección de errores Front-end (React) y Back-end (Laravel)",
+  "interninfo1_4": "Uso de Docker para infraestructura.",
+  "interninfo1_5": "Pruebas con sistema operativo Ubuntu y Windows.",
+
+  "job1": "Maquinista de línea",
+  "jobinfo1_1": "Configurar y mantener funcionamiento de maquinaria para producción y envasado.",
+
+  "interntitle2": "Prácticas CFPS Desarrollo aplicaciones Multiplataforma",
+  "interninfo2_1": "Desarrollo de scripts con Python usando las librerías Selenium y Pandas.",
+  "interninfo2_2": "Creación de log de errores y capturas de pantalla automatizadas.",
+
+  "job2": "Stadler Rail – Técnico pruebas tipo",
+  "jobinfo2_1": "Organizar y realizar pruebas funcionales en inglés.",
+  "jobinfo2_2": "Diseñar procedimientos de prueba funcional y homologación.",
+  "jobinfo2_3": "Detectar, comunicar y resolver problemas funcionales.",
+  "jobinfo2_4": "Realizar pruebas en instalaciones europeas.",
+
+  "education": "Formación",
+  "edutitle1": "CFPS Desarrollo de aplicaciones web",
+  "edutimeline1": "09/2025 - Actualidad",
+
+  "edutitle2": "CFPS Desarrollo de aplicaciones multiplataforma",
+  "edutitle3": "Ingeniería eléctrica - UPV",
+  "erasmus": "Erasmus en Praga, República Checa",
+  "tfg": "Pendiente TFG"
+
+}
