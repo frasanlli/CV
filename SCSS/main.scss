@@ -16,12 +16,14 @@ body{
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364, #0f2027);
   background-size: 300% 100%;
   animation: moverGradiente 5s ease-in-out infinite alternate;
+  min-width: 480px;
 }
 
 a:not(.defaultLink) {
   text-decoration: none;
   color: black;
   height: min-content;
+  cursor: pointer;
 }
 .defaultLink:hover {
   background-color: $btn-hover;
@@ -157,7 +159,8 @@ section {
 }
 
 .promo{
-  margin: auto 5em;
+  margin: auto;
+  display: flex;
 }
 
 .promo h4{
@@ -168,9 +171,7 @@ section {
 }
 
 .promo-grid{
-  display: grid;
-  @include responsive_promo;
-  grid-gap: 10px;
+  max-width: 720px;
 }
 
 .card{
@@ -249,6 +250,7 @@ ul{
   font-size: 25px;
   width: fit-content;
   transition-duration: 0.3s;
+  cursor: pointer;
 
   &:hover {
     margin-top: 0.60em;
@@ -271,6 +273,10 @@ ul{
 .end-tab{
   border-right: 2px solid;
   border-color: grey #5a5a5a #5a5a5a grey;
+}
+
+.language{
+  margin-left: auto;
 }
 
 h2.sin-borde {
@@ -374,4 +380,35 @@ video{
 
 .about-title{
   color: black !important
+}
+
+.promo-card {
+  display: none;
+}
+
+.promo-card.active {
+  display: inline-block;
+}
+
+button.next, button.prev {
+  background: black ;
+  color: white;
+  border: none;
+  margin: auto;
+  padding: 10px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+button.next:hover{
+  background-color: $background-hover;
+  color: black;
+  transform: scale(1.03) translateX(5px);
+}
+
+button.prev:hover{
+  background-color: $background-hover;
+  color: black;
+  transform: scale(1.03) translateX(-5px);
 }

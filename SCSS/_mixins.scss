@@ -101,10 +101,10 @@
 
 @mixin responsive_promo {
   @media (min-width: $mobile) {
-    grid-template-columns: 1fr;
+
   }
 
   @media (min-width: 1300px) {
-    grid-template-columns: repeat(2, 1fr);
+
   }
 }

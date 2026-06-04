@@ -1,99 +1,105 @@
 <section id="projects">
     <div class="promo">
+        <button id="prev" class="prev" onclick="changeSlide(-1)">&#10094;</button>
         <div class="promo-grid">
-            <a href="https://frasanlli.github.io/pdf_to_csv/">
-                <div class="card">
-                    <div class="box-title">
-                        <h4>pdf_to_csv</h4>
+            <div class="promo-card active">
+                <a href="https://frasanlli.github.io/pdf_to_csv/">
+                    <div class="card">
+                        <div class="box-title">
+                            <h4>pdf_to_csv</h4>
+                        </div>
+
+                        <div class="box-image">
+                            <video src="assets\video\pdf_to_csv.mp4" controls></video>
+                        </div>
+                        <p data-i18n="infoproject1">
+                            Página web en la que cargar archivos pdf y extraer datos en formato .csv
+                        </p>
+                        <ul>
+                            <li data-i18n="listproject1_1">
+                                Uso JS y la librería pdf.js
+                            </li>
+                            <li data-i18n="listproject1_2">
+                                Importar pdf para marcar áreas en tablas complejas.
+                            </li>
+                            <li data-i18n="listproject1_3">
+                                Obtener plantilla de áreas para reutilizar y csv con texto marcado
+                            </li>
+                            <li data-i18n="listproject1_4">
+                                Versión para pantallas táctiles pendiente de algunas mejoras
+                            </li>
+                        </ul>
+
                     </div>
+                </a>
+            </div>
+            <div class="promo-card">
+                <a href="https://github.com/frasanlli/calibration-mail">
+                    <div class="card">
 
-                    <div class="box-image">
-                        <video src="assets\video\pdf_to_csv.mp4" controls></video>
+                        <div class="box-title">
+                            <h4>
+                                calibration-mail
+                            </h4>
+                        </div>
+                        <div class="box-image">
+                            <img src="assets\images\device_status.png" alt="Proyecto 2">
+                        </div>
+                        <p data-i18n="infoproject2">
+                            Aplicación web para gestionar herramientas en un servidor local.
+                        </p>
+                        <ul>
+                            <li data-i18n="listproject2_1">
+                                Uso de Django y base de datos sqlite3 para gestionar uso y necesidad de calibración de
+                                dispositivos de medida.
+                            </li>
+                            <li data-i18n="listproject2_2">
+                                Posibilidad de importar xlms para transferirlo a la base de datos.
+                            </li>
+                            <li data-i18n="listproject2_3">
+                                Correos automatizados con estado de los elementos.
+                            </li>
+                            <li data-i18n="listproject2_4">
+                                Inicio de sesión y roles de usuario
+                            </li>
+                        </ul>
+
                     </div>
-                    <p data-i18n="infoproject1">
-                        Página web en la que cargar archivos pdf y extraer datos en formato .csv
-                    </p>
-                    <ul>
-                        <li data-i18n="listproject1_1">
-                            Uso JS y la librería pdf.js
-                        </li>
-                        <li data-i18n="listproject1_2">
-                            Importar pdf para marcar áreas en tablas complejas.
-                        </li>
-                        <li data-i18n="listproject1_3">
-                            Obtener plantilla de áreas para reutilizar y csv con texto marcado
-                        </li>
-                        <li data-i18n="listproject1_4">
-                            Versión para pantallas táctiles pendiente de algunas mejoras
-                        </li>
-                    </ul>
+                </a>
+            </div>
+            <div class="promo-card">
+                <a href="https://github.com/frasanlli/supermarket_prices">
+                    <div class="card">
+                        <div class="box-title">
+                            <h4>
+                                supermarket_prices
+                            </h4>
+                        </div>
+                        <div class="box-image">
+                            <img src="assets\images\database_example.png" alt="Proyecto 1_1">
+                            <img src="assets\images\execution.png" alt="Proyecto 1_2">
+                        </div>
+                        <p data-i18n="infoproject3">
+                            Este programa permite obtener los precios y otra información relevante sobre los productos
+                            extrayéndolos de los sitios web de los supermercados.
+                        </p>
+                        <ul>
+                            <li data-i18n="listproject3_1">
+                                Python con Selenium y Pandas para obtener productos de diversos supermercados y
+                                filtrarlos
+                            </li>
+                            <li data-i18n="listproject3_2">
+                                Uso JSON y Firebase (noSQL online) para almacenar los datos extraídos
+                            </li>
+                            <li data-i18n="listproject3_3">
+                                Creación de log para registrar ejecución y errores.
+                            </li>
 
-                </div>
-            </a>
-
-
-            <a href="https://github.com/frasanlli/calibration-mail">
-                <div class="card">
-
-                    <div class="box-title">
-                        <h4>
-                            calibration-mail
-                        </h4>
+                        </ul>
                     </div>
-                    <div class="box-image">
-                        <img src="assets\images\device_status.png" alt="Proyecto 2">
-                    </div>
-                    <p data-i18n="infoproject2">
-                        Aplicación web para gestionar herramientas en un servidor local.
-                    </p>
-                    <ul>
-                        <li data-i18n="listproject2_1">
-                            Uso de Django y base de datos sqlite3 para gestionar uso y necesidad de calibración de
-                            dispositivos de medida.
-                        </li>
-                        <li data-i18n="listproject2_2">
-                            Posibilidad de importar xlms para transferirlo a la base de datos.
-                        </li>
-                        <li data-i18n="listproject2_3">
-                            Correos automatizados con estado de los elementos.
-                        </li>
-                        <li data-i18n="listproject2_4">
-                            Inicio de sesión y roles de usuario
-                        </li>
-                    </ul>
-
-                </div>
-            </a>
-            <a href="https://github.com/frasanlli/supermarket_prices">
-                <div class="card">
-                    <div class="box-title">
-                        <h4>
-                            supermarket_prices
-                        </h4>
-                    </div>
-                    <div class="box-image">
-                        <img src="assets\images\database_example.png" alt="Proyecto 1_1">
-                        <img src="assets\images\execution.png" alt="Proyecto 1_2">
-                    </div>
-                    <p data-i18n="infoproject3">
-                        Este programa permite obtener los precios y otra información relevante sobre los productos
-                        extrayéndolos de los sitios web de los supermercados.
-                    </p>
-                    <ul>
-                        <li data-i18n="listproject3_1">
-                            Python con Selenium y Pandas para obtener productos de diversos supermercados y
-                            filtrarlos
-                        </li>
-                        <li data-i18n="listproject3_2">
-                            Uso JSON y Firebase (noSQL online) para almacenar los datos extraídos
-                        </li>
-                        <li data-i18n="listproject3_3">
-                            Creación de log para registrar ejecución y errores.
-                        </li>
-
-                    </ul>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
+        <button id="next" class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
 </section>

@@ -11,6 +11,27 @@ function prepararMail() {
   window.location.href = mailto;
 }
 
+function changeSlide(step) {
+  const slides = document.querySelectorAll(".promo-card");
+  let currentIndex = 0;
+
+  for (let i = 0; i < slides.length; i++) {
+    if (slides[i].classList.contains("active")) {
+      currentIndex = i + step;
+      break;
+    }
+  }
+
+  if (currentIndex >= slides.length) {
+    currentIndex = 0;
+  } else if (currentIndex < 0) {
+    currentIndex = slides.length - 1;
+  }
+
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[currentIndex].classList.add("active");
+}
+
 async function cargarPagina(btn) {
   const allTabs = document.querySelectorAll(".tab");
   allTabs.forEach(tab => tab.classList.remove("activo"));
@@ -35,14 +56,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 document.getElementById("langSelect").addEventListener("change", async (e) => {
-    await i18n.changeLanguage(e.target.value);
-    i18n.apply();
-  });
+  await i18n.changeLanguage(e.target.value);
+  i18n.apply();
+});
 
 document.querySelectorAll("button").forEach(btn => {
 
   btn.addEventListener("click", () => {
-    cargarPagina(btn);
+    if (btn.dataset.page){
+      cargarPagina(btn);
+    }
   });
 
 });

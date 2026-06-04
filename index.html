@@ -20,17 +20,16 @@
             <button class="contact" onclick="prepararMail()" data-i18n="contact" >Contactar</button>
             <a class="curv" href="assets/Francisco Sancho Llimera - CV.pdf" data-i18n="downcv" >Descargar CV</a>
             <!--<button class="download" onclick="imprimirPDF()">Descargar CV</button>-->
-            <select id="langSelect">
-                <option value="es">Español</option>
-                <option value="en">English</option>
-            </select>
         </div>
     </header>
     <div class="tab-bar">
         <button class="tab" data-page="proyectos" data-i18n="projects">Proyectos destacados</button>
         <button class="tab" data-page="habilidades" data-i18n="skills">Habilidades</button>
         <button class="tab end-tab" data-page="sobre_mi" data-i18n="aboutme">Sobre mi</button>
-
+        <select id="langSelect" class="tab end-tab language">
+            <option value="es">ESP</option>
+            <option value="en">ENG</option>
+        </select>
     </div>
     <main class="panel">
 
