@@ -26,6 +26,9 @@ body {
   background-size: 300% 100%;
   animation: moverGradiente 5s ease-in-out infinite alternate;
   min-width: 480px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a:not(.defaultLink) {
@@ -43,7 +46,9 @@ a:not(.defaultLink) {
 main {
   border-radius: 5px;
   border: 1px solid;
-  border-color: #ccc;
+  border-color: rgba(159, 189, 212, 0.15);
+  flex: 1;
+  background-color: rgba(159, 189, 212, 0.1);
 }
 
 @keyframes entrada-header {
@@ -70,8 +75,9 @@ header {
   padding: 1em 0;
   display: grid;
   grid-template-columns: 60% 40%;
-  animation: entrada-header 1.8s ease-out;
+  animation: entrada-header 1.5s ease-out;
   background: transparent;
+  width: 100%;
 }
 header h2 {
   color: #e5e7eb;
@@ -154,7 +160,7 @@ header h2 {
 
 .curv:hover {
   background-color: #9fbdd4;
-  color: black;
+  color: black !important;
   border-radius: 4px;
   transform: scale(1.1);
 }
@@ -194,8 +200,28 @@ h1 {
     background-color: #ccc;
   }
 }
-section {
+@keyframes entrada-footer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+section, footer {
   padding: 1em;
+}
+
+footer {
+  background-color: trans;
+  animation: entrada-footer 1.5s ease-out;
+}
+
+section {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .promo {
@@ -222,7 +248,7 @@ section {
   transition: all 0.3s ease;
 }
 .card:hover {
-  transform: translateY(-5px) scale(1.05);
+  transform: translateY(-5px) scale(1.03);
   box-shadow: 0 15px 35px #ccc;
   background: #b8c6d1;
 }
@@ -282,9 +308,6 @@ section {
     padding: 5px;
   }
 }
-#skills {
-  background-color: white;
-}
 #skills li {
   padding: 0.1em 0;
   list-style: none;
@@ -302,7 +325,7 @@ ul {
 }
 
 .tab {
-  background-color: transparent;
+  background-color: rgba(159, 189, 212, 0.1);
   border-radius: 4px;
   border-top: 2px solid;
   border-left: 2px solid;
@@ -328,6 +351,7 @@ ul {
   background-color: #ccc;
   color: black;
   border-color: #ccc;
+  cursor: auto;
 }
 .tab:not(.activo) {
   margin-top: 0.65em;
@@ -408,38 +432,19 @@ p {
   animation: fadeIn 0.5s ease-out;
 }
 
+#education {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
 #contact {
   background-color: #ccc;
-  display: grid;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   border-radius: 5px;
   margin-top: 1em;
-}
-@media (min-width: 480px) and (max-width: 768px) {
-  #contact {
-    grid-template: "head1 head2" "lenguage db" "head3 head4" "vc ml" "head5 head6" "other lengauge";
-  }
-  #contact #head {
-    border: 3px inset;
-    padding: 5px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  #contact {
-    grid-template: "head1 head2 head3" "lenguage db vc" "head4 head5 head6" "ml other lengauge";
-  }
-  #contact #head {
-    border: 3px inset;
-    padding: 5px;
-  }
-}
-@media (min-width: 1024px) {
-  #contact {
-    grid-template: "head1 head2 head3 head4 head5 head6" "lenguage db vc ml other lengauge";
-  }
-  #contact #head {
-    border: 3px inset;
-    padding: 5px;
-  }
+  margin-bottom: 0;
 }
 #contact span {
   padding: 0.1em 0;
@@ -472,13 +477,24 @@ video {
 
 .promo-card.active {
   display: inline-block;
+  animation: popIn 0.4s ease;
 }
 
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 button.next, button.prev {
-  background: black;
+  background: transparent;
   color: white;
   border: none;
-  margin: auto;
+  margin: 10px auto;
   padding: 10px;
   border-radius: 40px;
   cursor: pointer;
@@ -486,14 +502,10 @@ button.next, button.prev {
 }
 
 button.next:hover {
-  background-color: #b8c6d1;
-  color: black;
   transform: scale(1.03) translateX(5px);
 }
 
 button.prev:hover {
-  background-color: #b8c6d1;
-  color: black;
   transform: scale(1.03) translateX(-5px);
 }
 

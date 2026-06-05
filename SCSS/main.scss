@@ -17,6 +17,9 @@ body{
   background-size: 300% 100%;
   animation: moverGradiente 5s ease-in-out infinite alternate;
   min-width: 480px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a:not(.defaultLink) {
@@ -33,7 +36,9 @@ a:not(.defaultLink) {
 main{
   border-radius: 5px;
   border: 1px solid;
-  border-color: $nav-color;
+  border-color: rgba($nav-hover, 0.15);
+  flex: 1;
+  background-color: rgba($nav-hover, 0.1);
 }
 
 @keyframes entrada-header {
@@ -62,8 +67,9 @@ header{
   padding: 1em 0;
   display: grid;
   grid-template-columns: 60% 40%;
-  animation: entrada-header 1.8s ease-out;
+  animation: entrada-header 1.5s ease-out;
   background: transparent;
+  width: 100%;
   h2{
     color: $fuente-color-titulos;
     margin-top: 10px;
@@ -110,7 +116,7 @@ header{
 
 .curv:hover{
     background-color: $btn-hover;
-    color: black;
+    color: black !important;
     border-radius: 4px;
     transform: scale(1.1)
   }
@@ -154,8 +160,29 @@ h1{
   }
 }
 
-section {
+@keyframes entrada-footer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section, footer {
   padding: 1em;
+}
+
+footer{
+  background-color: trans;
+  animation: entrada-footer 1.5s ease-out;
+}
+
+section{
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .promo{
@@ -183,7 +210,7 @@ section {
   transition: all 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px) scale(1.05);
+    transform: translateY(-5px) scale(1.03);
     box-shadow: 0 15px 35px $nav-color;
     background: $background-hover;
     .box-title{
@@ -217,7 +244,6 @@ section {
 #skills{
   display: grid;
   @include responsive_grid;
-  background-color: $color-main;
   li{
     padding: 0.1em 0;
     list-style: none;
@@ -237,7 +263,7 @@ ul{
 }
 
 .tab {
-  background-color: transparent;
+  background-color: rgba($nav-hover, 0.1);
   border-radius: 4px;
   border-top: 2px solid;
   border-left: 2px solid;
@@ -264,6 +290,7 @@ ul{
     background-color: $nav-color;
     color: black;
     border-color: $nav-color;
+    cursor:auto;
   }
   &:not(.activo){
     margin-top: 0.65em;
@@ -335,8 +362,6 @@ p{
   grid-area: other;
 }
 
-
-
 #projects{
   background-color: trans;
   animation: entrar-derecha 0.5s ease-out;
@@ -347,15 +372,19 @@ p{
   animation: fadeIn 0.5s ease-out;
 }
 
+#education{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
 
 #contact{
   background-color: $nav-color;
-  display: grid;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   border-radius: 5px;
   margin-top: 1em;
-
-  @include responsive_grid;
-
+  margin-bottom: 0;
   span{
     padding: 0.1em 0;
   }
@@ -388,13 +417,25 @@ video{
 
 .promo-card.active {
   display: inline-block;
+  animation: popIn 0.4s ease;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 button.next, button.prev {
-  background: black ;
+  background: transparent;
   color: white;
   border: none;
-  margin: auto;
+  margin: 10px auto;
   padding: 10px;
   border-radius: 40px;
   cursor: pointer;
@@ -402,13 +443,9 @@ button.next, button.prev {
 }
 
 button.next:hover{
-  background-color: $background-hover;
-  color: black;
   transform: scale(1.03) translateX(5px);
 }
 
 button.prev:hover{
-  background-color: $background-hover;
-  color: black;
   transform: scale(1.03) translateX(-5px);
 }
