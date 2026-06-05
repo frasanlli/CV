@@ -90,18 +90,31 @@ document.querySelectorAll("button").forEach(btn => {
 
 
 document.addEventListener("keydown", function(event) {
-  //console.log(event.key.toLowerCase())
+  console.log(event.key.toLowerCase())
+  if (event.code === "Space") {
+    event.preventDefault();
+    const video = document.querySelector("video");
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }
   switch (event.key.toLowerCase()) {
     case "arrowright":
+      event.preventDefault();
       document.getElementById("next").click();
       break;
 
     case "arrowleft":
+      event.preventDefault();
       document.getElementById("prev").click();
       break;
 
     case "tab":
+      event.preventDefault();
       changeTab()
       break;
+
   }
 });
