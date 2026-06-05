@@ -219,6 +219,11 @@ footer {
   animation: entrada-footer 1.5s ease-out;
 }
 
+footer a:hover {
+  color: #2f649c;
+  transform: scale(1.1);
+}
+
 section {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;

@@ -179,6 +179,10 @@ footer{
   background-color: trans;
   animation: entrada-footer 1.5s ease-out;
 }
+footer a:hover{
+  color: $btn-color;
+  transform: scale(1.1)
+}
 
 section{
   border-bottom-left-radius: 20px;
