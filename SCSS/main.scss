@@ -87,14 +87,14 @@ header{
 .contact{
   @include responsive-button;
   float: right;
-  background-color: $btn-color;
+  background-color: rgba($btn-color, 0.4);
   color: white;
   border-radius: 40px;
   transition-duration: 0.5s;
 }
 
 .contact:hover {
-  background-color: $btn-hover;
+  background-color: rgba($btn-hover, 0.8);
   color: black;
   border-radius: 4px;
   cursor: pointer;
@@ -104,7 +104,7 @@ header{
 .curv{
   @include responsive-button;
   float: right;
-  background-color: $btn-color;
+  background-color: rgba($btn-color, 0.4);
   color: $fuente-color-titulos !important;
   border-radius: 40px;
   text-decoration: none;
@@ -115,7 +115,7 @@ header{
 }
 
 .curv:hover{
-    background-color: $btn-hover;
+    background-color: rgba($btn-hover, 0.8);
     color: black !important;
     border-radius: 4px;
     transform: scale(1.1)

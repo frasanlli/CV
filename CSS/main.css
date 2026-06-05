@@ -113,14 +113,14 @@ header h2 {
 }
 .contact {
   float: right;
-  background-color: #2f649c;
+  background-color: rgba(47, 100, 156, 0.4);
   color: white;
   border-radius: 40px;
   transition-duration: 0.5s;
 }
 
 .contact:hover {
-  background-color: #9fbdd4;
+  background-color: rgba(159, 189, 212, 0.8);
   color: black;
   border-radius: 4px;
   cursor: pointer;
@@ -148,7 +148,7 @@ header h2 {
 }
 .curv {
   float: right;
-  background-color: #2f649c;
+  background-color: rgba(47, 100, 156, 0.4);
   color: #e5e7eb !important;
   border-radius: 40px;
   text-decoration: none;
@@ -159,7 +159,7 @@ header h2 {
 }
 
 .curv:hover {
-  background-color: #9fbdd4;
+  background-color: rgba(159, 189, 212, 0.8);
   color: black !important;
   border-radius: 4px;
   transform: scale(1.1);
