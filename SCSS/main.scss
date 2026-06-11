@@ -248,6 +248,7 @@ section{
 #skills{
   display: grid;
   @include responsive_grid;
+  @include responsive;
   li{
     padding: 0.1em 0;
     list-style: none;

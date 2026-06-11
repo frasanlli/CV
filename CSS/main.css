@@ -313,6 +313,21 @@ section {
     padding: 5px;
   }
 }
+@media (min-width: 480px) {
+  #skills {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  #skills {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  #skills {
+    font-size: 18px;
+  }
+}
 #skills li {
   padding: 0.1em 0;
   list-style: none;
