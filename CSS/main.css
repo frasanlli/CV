@@ -294,6 +294,9 @@ section {
     border: 3px inset;
     padding: 5px;
   }
+  #skills {
+    font-size: 16px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   #skills {
@@ -303,6 +306,9 @@ section {
     border: 3px inset;
     padding: 5px;
   }
+  #skills {
+    font-size: 16px;
+  }
 }
 @media (min-width: 1024px) {
   #skills {
@@ -311,21 +317,6 @@ section {
   #skills #head {
     border: 3px inset;
     padding: 5px;
-  }
-}
-@media (min-width: 480px) {
-  #skills {
-    font-size: 16px;
-  }
-}
-@media (min-width: 768px) {
-  #skills {
-    font-size: 16px;
-  }
-}
-@media (min-width: 1024px) {
-  #skills {
-    font-size: 18px;
   }
 }
 #skills li {

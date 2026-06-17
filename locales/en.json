@@ -19,6 +19,7 @@
   "electricity": "Understand electrical schematics",
   "testing": "Functional testing",
   "english": "English (C1)",
+  "spanish": "Spanish",
 
   "infoproject1": "Web application to upload PDF files and extract data into .csv format from complex tables.",
   "listproject1_1": "JavaScript using the pdf.js library.",

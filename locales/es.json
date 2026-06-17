@@ -19,6 +19,7 @@
   "electricity": "Interpretar esquemas eléctricos",
   "testing": "Pruebas funcionales",
   "english": "Inglés (C1)",
+  "spanish": "Español",
 
   "infoproject1": "Página web en la que cargar archivos pdf y extraer datos en formato .csv",
   "listproject1_1": "Uso JS y la librería pdf.js",
