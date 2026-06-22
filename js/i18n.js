@@ -9,9 +9,11 @@ const i18n = {
   },
 
   async changeLanguage(lang) {
+    const langSelect = document.getElementById("langSelect")
     await this.load(lang);
     localStorage.setItem("lang", lang);
-    this.apply(); // 🔥 clave
+    this.apply();
+    langSelect.value = lang;
   },
 
   t(key) {
