@@ -103,12 +103,16 @@ document.addEventListener("keydown", function(event) {
   switch (event.key.toLowerCase()) {
     case "arrowright":
       event.preventDefault();
-      document.getElementById("next").click();
+      if (document.getElementById("next")) {
+        document.getElementById("next").click();
+      }
       break;
 
     case "arrowleft":
       event.preventDefault();
-      document.getElementById("prev").click();
+      if (document.getElementById("prev")) {
+        document.getElementById("prev").click();
+      }
       break;
 
     case "tab":
