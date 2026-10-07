@@ -28,8 +28,15 @@ const i18n = {
   },
 
   init() {
-    const saved = localStorage.getItem("lang") || "es";
-    return this.changeLanguage(saved);
+
+    if ( localStorage.getItem("lang")){
+      const saved = localStorage.getItem("lang") || "es";
+      return this.changeLanguage(saved);
+    }else{
+      console.log(navigator.language)
+      const defLanguage = navigator.language.startsWith("es") ? "es" : "en";
+      return this.changeLanguage(defLanguage);
+    }
   }
 };
 
